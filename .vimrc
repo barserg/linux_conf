@@ -2,6 +2,8 @@
 nnoremap <PageUp> <C-u> 
 nnoremap <PageDown> <C-d> 
 inoremap <PageUp> <C-o><C-u>
+" Always left some lines above when cursor reaches EOF
+set scrolloff=20
 
 " Quickly insert an empty new line without entering insert mode
 nnoremap <Leader>o o<Esc>
