@@ -1,14 +1,19 @@
 " PageUp/PageDown fix 
 nnoremap <PageUp> <C-u> 
 nnoremap <PageDown> <C-d> 
+inoremap <PageUp> <C-o><C-u>
 
 " Quickly insert an empty new line without entering insert mode
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 
+" Quickly remove the line in insert mode
+inoremap <Leader>dd <C-o>dd
+
 " Duplicate line in normal and block in visual mode
 nnoremap <C-d> :copy .<CR>
 vnoremap <C-d> :copy '><CR>
+
 
 " Enable syntax color 
 syntax enable 
