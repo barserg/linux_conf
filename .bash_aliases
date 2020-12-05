@@ -6,7 +6,7 @@
 ### Aliases block #############
 
 # Some default ls aliases (just in case)
-alias ll='ls -alF'
+alias ll='ls -alF --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
 
