@@ -23,8 +23,8 @@ alias dush='du -sh * | sort -hr'
 function mkdc { mkdir $@ && cd ${!#}; }
 
 # My packages packs
-alias aptInstallMySoftPack='apt install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop tcpdump ntfs-3g cifs-utils samba dnsutils psmisc'
-alias yumInstallMySoftPack='yum install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop tcpdump ntfs-3g cifs-utils samba'
+alias aptInstallMySoftPack='apt install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba dnsutils psmisc'
+alias yumInstallMySoftPack='yum install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba'
 
 ###############################
 
