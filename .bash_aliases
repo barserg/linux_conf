@@ -10,10 +10,12 @@ alias ll='ls -alF --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Custom aliases for lazy:
+# Custom aliases for the laziest:
 alias m='mcedit'
 alias v='mcview'
 alias c='cat'
+alias r='fc -s'
+alias s='sudo $(history -p !!)'
 alias grepcfg='grep -v "^\(\s*#\|\s*$\)"'
 alias scprsync="rsync --partial --progress --rsh=ssh"
 #alias dush='du -s *|sort -nr|cut -f 2-|while read a;do du -hs "$a";done'
