@@ -1,0 +1,18 @@
+# Ignore all files
+*
+
+# Do track files below
+!/.gitignore
+!/.vimrc
+!/.bash_aliases
+#!/.gitconfig
+
+!/.ssh
+/.ssh/*
+!/.ssh/authorized_keys
+
+!/.config
+/.config/*
+!/.config/mc
+/.config/mc/*
+!/.config/mc/ini
