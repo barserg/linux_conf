@@ -30,34 +30,34 @@ alias aptInstallMySoftPack='sudo apt install mc htop sudo vim git w3m curl p7zip
 alias yumInstallMySoftPack='sudo yum install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba ncurses-term'
 
 ###############################
-
-
 # SSH-Agent auto start ########
 mySSHkey=~/.ssh/barserg
-env=~/.ssh/agent.env
 
-agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+_sshAgentKey() {
+    env=~/.ssh/agent.env
+    
+    agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+    
+    agent_start () {
+            (umask 077; ssh-agent >| "$env")
+            . "$env" >| /dev/null ; }
+    
+    agent_load_env
+    
+    # agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+    agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+    
+    if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+            agent_start
+            ssh-add "$mySSHkey"
+    elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+            ssh-add "$mySSHkey"
+    fi
+    
+    unset env
+    unset mySSHkey
+}
 
-agent_start () {
-        (umask 077; ssh-agent >| "$env")
-        . "$env" >| /dev/null ; }
-
-agent_load_env
-
-# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
-agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
-
-if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
-        agent_start
-        ssh-add "$mySSHkey"
-elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
-        ssh-add "$mySSHkey"
-fi
-
-unset env
-unset mySSHkey
+[ -r "$mySSHkey" ] && _sshAgentKey
 ###############################
-
-
-
 
