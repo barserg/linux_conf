@@ -16,6 +16,10 @@ inoremap <Leader>dd <C-o>dd
 nnoremap <C-d> :copy .<CR>
 vnoremap <C-d> :copy '><CR>
 
+" Make cursor not to "step back" when ESC is pressed in Insert Mode
+"   https://vim.fandom.com/wiki/Prevent_escape_from_moving_the_cursor_one_character_to_the_left
+:inoremap <silent> <Esc> <Esc>`^
+"au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
 " Enable syntax color 
 syntax enable 
