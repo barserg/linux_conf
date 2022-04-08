@@ -26,7 +26,7 @@ alias vis='sudo -E vim'
 function mkdc { mkdir $@ && cd ${!#}; }
 
 # My packages packs
-alias aptInstallMySoftPack='sudo apt install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba dnsutils psmisc ncurses-term'
+alias aptInstallMySoftPack='sudo apt update && sudo apt install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba dnsutils psmisc ncurses-term'
 alias yumInstallMySoftPack='sudo yum install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba ncurses-term'
 
 ###############################
