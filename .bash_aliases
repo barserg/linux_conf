@@ -7,6 +7,7 @@
 
 # Some default ls aliases (just in case)
 alias ll='ls -alF --group-directories-first'
+alias lh='ls -alhF --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
 
