@@ -18,7 +18,7 @@ alias c='cat'
 alias r='fc -s'
 alias s='sudo $(history -p !!)'
 alias grepcfg='grep -v "^\(\s*#\|\s*$\)"'
-alias scprsync="rsync --partial --progress --rsh=ssh"
+alias scprsync="rsync --recursive --partial --progress --rsh=ssh"
 #alias dush='du -s *|sort -nr|cut -f 2-|while read a;do du -hs "$a";done'
 alias dush='du -sh * | sort -hr'
 alias vis='sudo -E vim'
