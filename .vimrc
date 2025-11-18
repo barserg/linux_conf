@@ -1,3 +1,7 @@
+" Ignore case for search by default
+set ignorecase
+set smartcase
+
 " PageUp/PageDown fix 
 nnoremap <PageUp> <C-u> 
 nnoremap <PageDown> <C-d> 
@@ -15,6 +19,9 @@ inoremap <Leader>dd <C-o>dd
 " Duplicate line in normal and block in visual mode
 nnoremap <C-d> :copy .<CR>
 vnoremap <C-d> :copy '><CR>
+
+" Toggle line numbers hotkey
+nnoremap <leader>n :set number!<CR>
 
 " Make cursor not to "step back" when ESC is pressed in Insert Mode
 "   https://vim.fandom.com/wiki/Prevent_escape_from_moving_the_cursor_one_character_to_the_left
