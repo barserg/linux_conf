@@ -22,6 +22,7 @@ alias scprsync="rsync --recursive --partial --progress --rsh=ssh"
 #alias dush='du -s *|sort -nr|cut -f 2-|while read a;do du -hs "$a";done'
 alias dush='du -sh * | sort -hr'
 alias vis='sudo -E vim'
+alias sudo='sudo '
 
 # Custom alias functions:
 function mkdc { mkdir $@ && cd ${!#}; }
