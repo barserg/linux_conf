@@ -28,8 +28,11 @@ alias sudo='sudo '
 function mkdc { mkdir $@ && cd ${!#}; }
 
 # My packages packs
-alias aptInstallMySoftPack='sudo apt update && sudo apt install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba dnsutils psmisc ncurses-term tree'
-alias yumInstallMySoftPack='sudo yum install mc htop sudo vim git w3m curl p7zip pigz sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba ncurses-term tree'
+alias aptInstallMySoftPack='sudo apt update && sudo apt install mc htop sudo vim git w3m curl p7zip pigz \
+ sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba dnsutils psmisc ncurses-term tree \
+ parted cloud-guest-utils'
+alias yumInstallMySoftPack='sudo yum install mc htop sudo vim git w3m curl p7zip pigz \
+ sysstat rsync tmux nload iftop iotop atop tcpdump ntfs-3g cifs-utils samba ncurses-term tree'
 
 ###############################
 # SSH-Agent auto start ########
